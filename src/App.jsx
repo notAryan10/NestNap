@@ -1,22 +1,41 @@
 import './App.css';
+import SleepHealthWebsite from './SleepHealthWebsite';
+import BlurText from './BlurText';
 
 function App() {
+  const handleAnimationComplete = () => {
+    console.log('Animation completed!');
+  };
+
+  const scrollToTracker = () => {
+    const trackerSection = document.getElementById('tracker-section');
+    if (trackerSection) {
+      trackerSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="app-container">
       <header className="header">
         <div className="logo">NapNest</div>
-        <button className="menu-btn">MENU</button>
       </header>
       <main className="main-section">
         <div className="center-title">
-          <h1>SLEEP WELL WITH<br />NAPNEST</h1>
+          <BlurText
+            text="SLEEP WELL WITH NAPNEST"
+            delay={50}
+            animateBy="letters"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="center-title-text"
+          />
         </div>
         <div className="split-bg">
           <div className="left-bg">
             <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Person in bed" />
             <div className="card">
               <p>Start tracking your sleep journey today.</p>
-              <button>Explore More</button>
+              <button onClick={scrollToTracker}>Explore More</button>
             </div>
           </div>
           <div className="right-bg">
@@ -65,13 +84,14 @@ function App() {
             <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" alt="Sleeping child illustration" />
           </div>
         </section>
+        <SleepHealthWebsite />
       </main>
       <footer className="footer-section">
         <div className="footer-row footer-centered">
           <div className="footer-center">Stay Connected with NapNest</div>
           <div className="footer-contact">
             <div>123-456-7890</div>
-            <div>info@mysite.com</div>
+            <div>xyz@gmail.com</div>
           </div>
         </div>
       </footer>
