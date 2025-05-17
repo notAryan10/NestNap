@@ -1,0 +1,16 @@
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+  font-size: clamp(1rem, 7vw, 2.3rem);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Georgia', serif;
+}
+
+.char {
+  display: inline-block;
+}

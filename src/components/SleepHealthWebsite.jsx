@@ -8,7 +8,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import './App.css';
+import '../App.css';
 import SleepImpact from './SleepImpact';
 
 const LOCAL_STORAGE_KEY = "sleepData";
